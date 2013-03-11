@@ -46,7 +46,9 @@ if (window.history && 'pushState' in history) {
         // create a state object from html
         function createState($content) {
 
-            // create state object
+            // create state object - 2013-03-10: browsers apparently
+			// ignore "title", but we should keep this anyway in case they
+			// start caring
             var state = {
                 content : $content.find('.content').html(),
                 photo : $content.find('.photo').attr('src'),
